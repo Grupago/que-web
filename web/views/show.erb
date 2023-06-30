@@ -3,7 +3,7 @@
     <h1>Job <%= @job.id %></h1>
   </div>
 </div>
-<div class="row">
+<div class="">
   <div class="small-12 columns">
     <table>
       <tbody>
@@ -33,6 +33,10 @@
         <tr>
           <th>Args</th>
           <td><pre><%= h JSON.pretty_generate(@job.args) %></pre></td>
+        </tr>
+        <tr>
+          <th>Kwargs</th>
+          <td><pre><%= h JSON.pretty_generate(@job.kwargs) %></pre></td>
         </tr>
         <tr>
           <th>Last Error</th>
