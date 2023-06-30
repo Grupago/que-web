@@ -177,6 +177,10 @@ module Que
       def format_args(job)
         truncate job.args.map(&:inspect).join(', ')
       end
+      
+      def format_kwargs(job)
+        truncate job.kwargs.map(&:inspect).join(', ')
+      end
 
       def format_error(job)
         return unless job.last_error_message
